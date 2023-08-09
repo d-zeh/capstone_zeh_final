@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1 ">
+        <title>Login Successful</title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="keywords" content="inventory, appareal, clothes, store, Tabasco, Zacatecas">
+        <meta name="author" content="Daniel Zeh">
+        <style></style>
+    </head>
+
+<body class="container" background="https://img.freepik.com/premium-photo/barbie-doll-with-pink-hair-is-shown-with-pink-hat_802234-1119.jpg">
+
+    <nav class="navMenu">
+        <ul>
+            <li><a href="#" id="mainLink">Main Page</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="intro-text">
+        <p>Welcome to our inventory management system. This is where you can add, view, and manage garments in our store.</p>
+    </div>
+
+    
+    <div class="container">
+        
+
+
+            <div class="content" id="mainContent">
+                <div class="section add-inventory">
+                    <h2>Add Inventory</h2>
+                    <form id="inventoryForm">
+        
+                        <label for="garmetName"> Garmet Name:</label>
+                        <input type="text" name="garmetName" id="garmetName_id" placeholder="Name">
+                        <br>
+                  
+                  
+                        <label for="size"> Size: </label>
+                        <select id="addGarmet-size" name="size" >
+                          <option value="small">Small</option>
+                          <option value="medium">Medium</option>
+                          <option value="large">Large</option>
+                          <option value="x-small">X-Small</option>
+                          <option value="x-large">X-Large</option>
+                          <option value="other">Other/Not Listed</option>
+                        </select>
+                        <br>
+                  
+                        <label for="season"> Season: </label>
+                        <select id="addGarmet-season" name="season">
+                          <option value="spring">Spring</option>
+                          <option value="summer">Summer</option>
+                          <option value="fall">Fall</option>
+                          <option value="winter">Winter</option>
+                          <option value="other">Other</option>
+                        </select>
+                        <br>
+                  
+                        <label for="department"> Dept: </label>
+                        <select id="addGarmet-dept" name="department">
+                          <option value="women">Women</option>
+                          <option value="men">Men</option>
+                          <option value="girls">Girls</option>
+                          <option value="boys">Boys</option>
+                          <option value="non-gender">Non-Binary</option>
+                          <option value="infant">Infant</option>
+                        </select>
+                        <br>
+                  
+                  
+                        <label for="selling"> Selling Price: </label>
+                        <input type="text" name="selling" id="addGarmet-selling" placeholder="Required" required>
+                        <br><br>
+                  
+                        <label for="purchased"> Purchase Price: </label>
+                        <input type="number" name="purchased" id="addGarmet-purchased"  placeholder="Optional"><br>
+                  <br>
+                        <label for="aquired"> Aquired From: </label>
+                        <input type=text" name="aquired" id="addGarmet-aquired" placeholder="Optional"><br>
+                  <br>
+                        <button type="submit" id="addInvbutton">Add</button>
+                      </form>
+                </div>
+                <div class="section sell">
+                    <h2>Sell</h2>
+                    <form id="lookupForm">
+        
+                        <label for="referenceNum"> Reference Number:</label>
+                        <input type="text" name="referenceNum" id="referenceNum" placeholder="***">    
+            
+                <br>
+                      <button type="button" id="searchBtn">Search</button>
+                    </form>
+                    <br>
+                    Or
+                    <br><br>
+                    <button type="submit" id="allInvLookup"> All Inventory</button>
+                </div>
+            
+        </div>
+
+
+
+    </div>
+    <div class="content" id="inventoryContent">
+    </div>
+    
+
+
+
+
+    
+    <div class="interactive-box">
+      <div class="interactive-box-content">
+          <h3>Garment Details</h3>
+          <p><strong>Name:</strong> <span id="box-garment-name"></span></p>
+          <p><strong>Size:</strong> <span id="box-garment-size"></span></p>
+          <p><strong>Season:</strong> <span id="box-garment-season"></span></p>
+          <p><strong>Department:</strong> <span id="box-garment-department"></span></p>
+          <p><strong>Price: $</strong> <span id="box-garment-price"></span></p>
+          <p><strong>Purchased at: $</strong> <span id="box-garment-purchased"></span></p>
+          <p><strong>Acquired from:</strong> <span id="box-garment-acquired"></span></p>
+          <p><strong>Reference Number:</strong> <span id="box-garment-reference"></span></p>
+          <button>OK</button>
+      </div>
+  </div>
+  
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
+
